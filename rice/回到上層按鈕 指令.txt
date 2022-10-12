@@ -1,0 +1,29 @@
+Html：
+<a href="#home" class="fas fa-angle-up" id="scroll-up"></a>
+
+
+JavaScript：
+
+window.onscroll=()=>{
+  if(window.scrollY>60){
+    document.querySelector('#scroll-up').classList.add('active');
+  }else{
+    document.querySelector('#scroll-up').classList.remove('active');
+  }
+
+CSS：
+#scroll-up{
+  position: fixed;
+  top: -120%;
+  right: 20px;
+  padding: 10px;
+  font-size: 25px;
+  background: chocolate;
+  color: white;
+  border-radius: 10px;
+  opacity: 0.8;
+  transition: 1s linear;
+}
+#scroll-up.active{
+  top: 80%;
+}
